@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExamApp - a Virtual Classroom for everyone!</title>
+    {% load static %}
+
+    <link rel="icon" href=" {% static 'img/icons/writing.svg' %} " />
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'general/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'general/css/materialize.min.css'%}">
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Scripts -->
+
+    <script src="{% static 'general/js/materialize.min.js' %}"></script>
+  
+  </head>
+  <body>
+
+    {% block NavBar %}
+    {% endblock NavBar %}
+ 
+    {% block MainContent %}
+    {% endblock MainContent %}    
+
+    {% block Footer %}
+    {% endblock Footer %}
+
+    {% if messages %}
+    <script>
+      {% for message in messages %}
+        M.toast({html: '{{message}}' , classes: 'toast-blue rounded', displayLength: 5000 });
+      {% endfor %}
+    </script>
+    {% endif %}
+ 
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){ 
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0;     
+      }, false);
+
+    </script>
+  </body>
+</html>

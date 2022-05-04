@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block NavBar %}
+    {% include 'general/navbar.html' with profile=True %}
+{% endblock NavBar %}
+
+
+{% block MainContent %}
+
+<link rel="stylesheet" href="{% static 'student/css/profile.css' %}" />
+
+    <div class="row">
+      <div class="col s12 l8 profile-banner">
+        <div class="row">
+          <div class="col s4 l3">
+            <div class="card profile-image">
+              <img src="{% static 'img/icons/graduate.svg' %}" alt="Profile Image" />
+            </div>
+          </div>
+          <div class="col s8 l9">
+            <div class="card profile-details">
+              <div class="row">
+                <div class="col s12 l12 profile-name">
+                  <span class="truncate"
+                    >{{ user.first_name|add:" "|add:user.last_name }}</span
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12 l12 profile-register-no">
+                  <i class="material-icons">stars</i>
+                  <span>{{ user.reg_id }}</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12 l12 profile-register-no">
+                  <i class="material-icons">business</i>
+                  <span>{{ user.dept_name }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 l2">
+        <div class="card profile-card">
+          <img src="{% static 'img/icons/trophy.svg' %}" alt="Rank Icon" />
+          <span class="count">5</span>
+          <span>Rank</span>
+        </div>
+      </div>
+      <div class="col s6 l2">
+        <div class="card profile-card">
+          <img src="{% static 'img/icons/medals.svg' %}" alt="Rank Icon" />
+          <span class="count">12</span>
+          <span>Medals</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s8 l10 offset-l1 offset-s2">
+          <div class="divider"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-left: 20px;">
+      <span class="stats-title">
+        STATS OVERVIEW
+      </span>
+    </div>
+
+    <div class="stats-wrapper row">
+      <div class="col s6 l3">
+        <div class="card stats-card">
+          <div class="icon-holder">
+            <img src="{% static 'img/icons/timer.svg' %}" alt="Rank Icon" />
+          </div>
+          <span>AVERAGE TIME SPENT</span>
+          <span class="count">25 Minutes</span>
+        </div>
+      </div>
+      <div class="col s6 l3">
+        <div class="card stats-card">
+          <div class="icon-holder">
+            <img src="{% static 'img/icons/target.svg' %}" alt="Rank Icon" />
+          </div>
+          <span>ACCURACY</span>
+          <span class="count">85.5%</span>
+        </div>
+      </div>
+
+      <div class="col s6 l3">
+        <div class="card stats-card">
+          <div class="icon-holder">
+            <img src="{% static 'img/icons/podium.svg' %}" alt="Rank Icon" />
+          </div>
+          <span>YOUR COMPETITOR</span>
+          <div class="competitor">
+            <div class="competitor competitor-image">
+              <img src=" {% static 'img/icons/graduate.svg' %}" alt="Profile Picture" />
+            </div>
+            <div class="competitor-name">
+              Mohamed Nowfal A
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 l3">
+        <div class="card stats-card">
+          <div class="icon-holder">
+            <i class="material-icons">arrow_forward</i>
+          </div>
+          <span>UPCOMING TESTS</span>
+          <a href="#" class="blue-button">See All Tests</a>
+        </div>
+      </div>
+    </div>
+<br>    
+    
+{% endblock MainContent %}
+
+{% block Footer %}
+    {% include 'general/footer.html' %}
+
+{% endblock Footer %}
+

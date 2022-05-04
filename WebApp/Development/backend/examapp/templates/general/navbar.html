@@ -1,0 +1,64 @@
+{% load static %}
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/">
+        <div class="logo">
+            <img src=" {% static 'img/icons/writing.svg' %} " alt="ExamApp Icon" />
+            <span>ExamApp</span>
+        </div>
+      </a>
+
+      <div class="links hide-on-med-and-down">
+        
+        {% if courses %}
+          {% if request.user.is_student %}
+            <a href="{% url 'studentCourses' %}" class="link link-active">Courses</a>      
+          {% elif request.user.is_staff %}
+            <a href="{% url 'tutorCourses' %}" class="link link-active">Courses</a>      
+          {% else %}
+            <a href="{% url 'studentCourses' %}" class="link link-active">Courses</a>      
+          {% endif %}
+        {% else %}
+          {% if request.user.is_student %}
+            <a href="{% url 'studentCourses' %}" class="link">Courses</a>      
+          {% elif request.user.is_staff %}
+            <a href="{% url 'tutorCourses' %}" class="link">Courses</a>      
+          {% else %}
+            <a href="{% url 'studentCourses' %}" class="link">Courses</a>      
+          {% endif %}
+        {% endif %}
+
+        {% if profile %}
+          {% if request.user.is_student %}
+            <a href="{% url 'studentProfile' %}" class="link link-active">Profile</a>      
+          {% elif request.user.is_staff %}
+            <a href="{% url 'tutorProfile' %}" class="link link-active">Profile</a>      
+          {% else %}
+            <a href="{% url 'studentProfile' %}" class="link link-active">Profile</a>      
+          {% endif %}
+        {% else %}
+        {% if request.user.is_student %}
+            <a href="{% url 'studentProfile' %}" class="link link">Profile</a>      
+          {% elif request.user.is_staff %}
+            <a href="{% url 'tutorProfile' %}" class="link link">Profile</a>      
+          {% else %}
+            <a href="{% url 'studentProfile' %}" class="link link">Profile</a>      
+          {% endif %}
+        {% endif %}
+        
+        {% if help %}
+          <a href="{% url 'help' %}" class="link link-active">Help</a>
+        {% else %}
+          <a href="{% url 'help' %}" class="link">Help</a>
+        {% endif %}
+
+        {% if not user.is_authenticated %}
+          <a href="{% url 'login' %}" class="nav-button">Get Started</a>
+        {% else %}
+          <a href="{% url 'logout' %}" class="nav-button"> Logout </a>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+</div>

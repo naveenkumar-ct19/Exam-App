@@ -1,0 +1,139 @@
+.card {
+  height: 200px;
+  width: 100%;
+}
+.profile-card span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.profile-card .count {
+  font-size: 35px;
+  font-weight: 600;
+}
+.profile-card img {
+  width: 40%;
+  height: 50%;
+}
+.profile-card {
+  background: #ffffff;
+  display: flex;
+  padding: 25px 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.profile-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none !important;
+}
+
+.profile-image img {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.profile-details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: none !important;
+}
+.profile-name span {
+  font-size: 25px;
+  font-weight: bold;
+}
+.profile-register-no {
+  display: flex;
+  color: #ffcc33;
+  align-items: center;
+}
+.profile-register-no span {
+  font-size: 18px;
+  margin-left: 5px;
+  color: #6340a3;
+  font-weight: bold;
+}
+.stats-card {
+  background: #ffffff;
+  display: flex;
+  width: 100%;
+  height: 280px;
+  padding: 15px 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.stats-card .icon-holder i {
+  font-size: 40px;
+  color: #ffcc33;
+}
+.stats-card .icon-holder {
+  background: #f4f2e6;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.stats-card img {
+  width: 60%;
+  height: 60%;
+}
+.stats-card span {
+  font-size: 13px;
+  font-weight: 600;
+}
+.stats-card .count {
+  color: #6340a3;
+  font-size: 30px;
+  font-weight: 700;
+}
+.competitor .competitor-image img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.competitor .competitor-image {
+  width: 30px;
+  border-radius: 50%;
+  background-color: #f4f2e6;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.competitor {
+  margin: 0 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.stats-title {
+  font-weight: 600;
+}
+
+.row {
+  margin-bottom: 5px !important;
+}
+
+.blue-button {
+  background: #6340a3;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 0 !important;
+  padding: 20px;
+}

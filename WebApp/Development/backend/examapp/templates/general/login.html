@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block NavBar  %} 
+    {% include "general/navbar.html"%}
+{% endblock NavBar %}
+
+
+{% block MainContent %}
+
+<script>
+
+    
+
+</script>
+
+<link rel="stylesheet" href="{% static 'general/css/login.css' %}" />
+<div class="row">
+  <div class="col s10 offset-s1 m8 offset-m2 l4 offset-l4">
+
+    <form class="login-form" method="POST">
+
+
+
+      <div class="container mb-5 flex flex-center">
+        <img src="{% static 'img/icons/privacy.svg' %}" class="icon" alt="Login Icon" />
+        <span class="title">Let's Get Started</span>
+      </div>
+
+      {% csrf_token %}
+
+      <div class="container col s10 m10 l10">
+        <div class="input-field">
+          <i class="material-icons prefix">account_circle</i>
+          <input
+            id="email"
+            name="email"
+            minlength="6"
+            type="email"
+            autocomplete="email"
+            class="validate"
+          />
+          <label for="email">Email ID</label>
+          <span
+            class="helper-text"
+            data-error="Enter a valid Email!"
+            data-success="Looks Good!"
+            >Email given by your institution</span
+          >
+        </div>
+      </div>
+
+      <div class="container col s10 m10 l10">
+        <div class="input-field">
+          <i class="material-icons prefix">lock</i>
+          <input
+            id="password"
+            type="password"
+            minlength="8"
+            autocomplete="current-password"
+            name="password"
+            class="validate"
+          />
+          <label for="password">Password</label>
+          <span
+            class="helper-text"
+            data-error="Password must be at least 8 characters!"
+            data-success="Looks Good!"
+            >Your Secret Password</span
+          >
+        </div>
+      </div>
+
+      <div class="container col s10 m10 l10">
+        <div class="flex flex-center">
+          <input type="submit" class="orange-button" value="Login" />
+        </div>
+      </div>
+
+      <div class="container col s10 m10 l10">
+        <div class="flex flex-center">
+          <a href="#"> <strong>Forget Password?</strong> </a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock MainContent %}
+
+
+
+{% block Footer %}
+  {% include 'general/footer.html' %}
+{% endblock Footer %}

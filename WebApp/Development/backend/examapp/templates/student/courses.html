@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% block NavBar  %} 
+    {% include "general/navbar.html"  with courses=True %}
+{% endblock NavBar %}
+
+
+
+
+{% block MainContent %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'student/css/courses.css' %}" />
+{% include 'general/extras.html' %}
+<div class="row">
+  <div class="upcoming-test hide-on-med-and-down col s12 m6 l3 xl3">
+    <div class="title">
+      <span>UPCOMING TESTS</span>
+    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-content">
+          <div class="subject-title">
+            Engineering Mathematics II
+          </div>
+          <img src="{% static 'img/icons/list.svg' %}" alt="Assessment Icon" />
+          <span>TEST STARTS IN</span>
+          <div class="timer">10 Hrs 5 Mins 2 Sec</div>
+        </div>
+        <div class="card-button">TAKE TEST</div>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="card">
+        <div class="card-content">
+          <div class="subject-title">
+            Engineering Mathematics II
+          </div>
+          <img src="{% static 'img/icons/list.svg' %}" alt="Assessment Icon" />
+          <span> TEST STARTS IN</span>
+          <div class="timer">10 Hrs 5 Mins 2 Sec</div>
+        </div>
+        <div class="card-button">TAKE TEST</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="courses-tab col s12 m12 l9 xl9">
+    <div>
+      <span class="title">MY COURSES</span>
+    </div>
+    <div class="courses-list">
+      <div class="card-wrapper col s12 m6 l4">
+        <div class="card">
+          <div class="subject-banner">
+            <div class="subject-name">
+              Data Strcutures and Algorithm
+            </div>
+          </div>
+          <div class="faculty-details">
+            <div class="faculty-image">
+              <img src="{% static 'img/icons/graduate.svg' %}" alt="Faculty Image" />
+            </div>
+            <div class="faculty-name truncate">
+              Dr. Ramesh C
+            </div>
+          </div>
+          <div class="student-details">
+            <i class="material-icons">school</i> <span> 57 Friends</span>
+          </div>
+          <div id="course-button" class="course-button">
+            TAKE ME IN
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper col s12 m6 l4">
+        <div class="card">
+          <div
+            class="subject-banner"
+            style="background-image: url('../../Maths.jpg');"
+          >
+            <div class="subject-name">
+              Data Strcutures and Algorithm
+            </div>
+          </div>
+          <div class="faculty-details">
+            <div class="faculty-image">
+              <img src="{% static 'img/icons/graduate.svg' %}" alt="Faculty Image" />
+            </div>
+            <div class="faculty-name truncate">
+              Dr. Ramesh C
+            </div>
+          </div>
+          <div class="student-details">
+            <i class="material-icons">school</i> <span> 57 Friends</span>
+          </div>
+          <div id="course-button" class="course-button">
+            TAKE ME IN
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper col s12 m6 l4">
+        <div class="card">
+          <div class="subject-banner">
+            <div class="subject-name">
+              Data Strcutures and Algorithm
+            </div>
+          </div>
+          <div class="faculty-details">
+            <div class="faculty-image">
+              <img src="{% static 'img/icons/graduate.svg' %}" alt="Faculty Image" />
+            </div>
+            <div class="faculty-name truncate">
+              Dr. Ramesh C
+            </div>
+          </div>
+          <div class="student-details">
+            <i class="material-icons">school</i> <span> 57 Friends</span>
+          </div>
+          <div id="course-button" class="course-button">
+            TAKE ME IN
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper col s12 m6 l4">
+        <div class="card">
+          <div class="subject-banner">
+            <div class="subject-name">
+              Data Strcutures and Algorithm
+            </div>
+          </div>
+          <div class="faculty-details">
+            <div class="faculty-image">
+              <img src="{% static 'img/icons/graduate.svg' %}" alt="Faculty Image" />
+            </div>
+            <div class="faculty-name truncate">
+              Dr. Ramesh C
+            </div>
+          </div>
+          <div class="student-details">
+            <i class="material-icons">school</i> <span> 57 Friends</span>
+          </div>
+          <div id="course-button" class="course-button">
+            TAKE ME IN
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock MainContent %}
+
+
+{% block Footer %}
+    {% include "general/footer.html" %}
+{% endblock Footer %}

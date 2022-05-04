@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+body {
+  font-family: "Varela Round", sans-serif;
+}
+nav {
+  background: linear-gradient(
+    90deg,
+    #6340a3 16.22%,
+    #442271 53.91%,
+    #2a0846 82.19%
+  );
+}
+.nav-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  overflow-y: hidden;
+  justify-content: space-between;
+}
+
+nav .logo {
+  line-height: 0 !important;
+  display: flex;
+  width: 70%;
+  align-items: center;
+}
+
+nav .logo span {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+nav .logo img {
+  width: 40px;
+  margin-left: 50px;
+  height: 40px;
+}
+
+nav .links {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 500;
+}
+
+nav .link-active {
+  border-bottom: orange solid 3px !important;
+}
+nav .link {
+  height: 50%;
+  border-bottom: transparent solid 3px;
+  line-height: 0 !important;
+  padding: 15px 0;
+}
+nav .nav-button {
+  height: 50%;
+  background: linear-gradient(90deg, #ffb346 0%, #ffcc33 100%);
+  border-radius: 30px;
+  color: black;
+  line-height: 0 !important;
+  padding: 15px 10px;
+}
+
+nav .link:hover {
+  transition: 0.05s ease-in;
+  border-bottom: orange solid 3px;
+}
+.copyright-footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 12px;
+  background: #ffcc33;
+}
+
+.divider {
+  color: #2a0846;
+  width: 100%;
+  height: 3px;
+}

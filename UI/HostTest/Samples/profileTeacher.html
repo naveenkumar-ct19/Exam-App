@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExamApp - Profile Teacher</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="materialize.min.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="profileTeacher.css" />
+
+    <style>
+      @media only screen and (max-width: 600px) {
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #ffb346 0%, #ffcc33 100%);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #ffd346 0%, #ffcc33 100%);
+      }
+    </style>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="materialize.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="logo">
+            <img src="img/writing.svg" alt="ExamApp Icon" />
+            <span>ExamApp</span>
+          </div>
+          <div class="links hide-on-med-and-down">
+            <a href="index.html" class="link">Courses</a>
+            <a href="profile.html" class="link link-active">Profile</a>
+            <a href="settings.html" class="link">Settings</a>
+            <a href="login.html" class="nav-button">Get Started</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row courses-list">
+      <div class="col s12 l8 profile-banner">
+        <div class="row">
+          <div class="col s4 l3">
+            <div class="card profile-image">
+              <img src="img/graduate.svg" alt="Profile Image" />
+            </div>
+          </div>
+          <div class="col s8 l9">
+            <div class="card profile-details">
+              <div class="row">
+                <div class="col s12 l12 profile-name">
+                  <span class="truncate">Dr. Nitharshan Nithu D J</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12 l12 profile-register-no">
+                  <i class="material-icons">stars</i>
+                  <span>192CT11659532</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12 l12 profile-register-no">
+                  <i class="material-icons">business</i>
+                  <span>Computer Science and Engineering</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 l2">
+        <div class="card profile-card">
+          <img src="img/message.svg" alt="Message Icon" />
+          <span class="count">0</span>
+          <span>Unread Messages</span>
+        </div>
+      </div>
+      <div class="col s6 l2">
+        <div class="card profile-card">
+          <img src="img/writing.svg" alt="Review Icon" />
+          <span class="count">2</span>
+          <span>Reviews Pending</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s8 l10 offset-l1 offset-s2">
+          <div class="divider"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="courses-tab row">
+      <div class="headings">
+        <span class="title">MY COURSES</span>
+        <a href="#">VIEW ALL</a>
+      </div>
+      <div class="courses-list">
+        <div class="card-wrapper col s12 m6 l4">
+          <div class="card">
+            <div class="subject-banner">
+              <div class="subject-name">
+                Data Strcutures and Algorithm
+              </div>
+            </div>
+            <div class="student-details">
+              <i class="material-icons">school</i> <span> 57 Students</span>
+            </div>
+            <div id="course-button" class="course-button">
+              TAKE ME IN
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper col s12 m6 l4">
+          <div class="card">
+            <div class="subject-banner">
+              <div class="subject-name">
+                Data Strcutures and Algorithm
+              </div>
+            </div>
+            <div class="student-details">
+              <i class="material-icons">school</i> <span> 57 Students</span>
+            </div>
+            <div id="course-button" class="course-button">
+              TAKE ME IN
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper col s12 m6 l4">
+          <div class="card">
+            <div class="subject-banner">
+              <div class="subject-name">
+                Data Strcutures and Algorithm
+              </div>
+            </div>
+            <div class="student-details">
+              <i class="material-icons">school</i> <span> 57 Students</span>
+            </div>
+            <div id="course-button" class="course-button">
+              TAKE ME IN
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="copyright-footer">
+      Made with 💙 by App Engineers
+    </footer>
+  </body>
+</html>

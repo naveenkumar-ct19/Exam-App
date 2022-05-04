@@ -1,0 +1,49 @@
+.login-form {
+  width: 100%;
+  height: 500px;
+  background-color: #fff;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-form .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+}
+
+.login-form i {
+  color: #6340a3;
+}
+.login-form .title {
+  font-weight: bold;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.mb-5 {
+  margin-bottom: 20px !important;
+}
+
+.orange-button {
+  height: 50%;
+  background: linear-gradient(90deg, #ffb346 0%, #ffcc33 100%);
+  border-radius: 30px;
+  font-weight: 500;
+  color: black;
+  line-height: 0 !important;
+  padding: 15px 20px;
+}

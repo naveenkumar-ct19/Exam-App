@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block NavBar  %} 
+    {% include "general/navbar.html"  with courses=True %}
+{% endblock NavBar %}
+
+{% block MainContent %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'tutor/css/add_course.css' %}" />
+
+    <div>
+        <span class="title">New Course</span>
+    </div>
+
+
+
+  
+{% endblock MainContent %}
+
+{% block Footer %}
+    {% include "general/footer.html" %}
+{% endblock Footer %}
+

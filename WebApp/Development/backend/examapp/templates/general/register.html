@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block NavBar  %} 
+    {% include "general/navbar.html"%}
+{% endblock NavBar %}
+
+
+{% block MainContent %}
+
+<script>
+
+    
+
+</script>
+<link rel="stylesheet" href="{% static 'general/css/register.css' %}" />
+
+<div class="row">
+  <div class="col s10 offset-s1 m10 offset-m1 l6 offset-l3">
+
+    <form class="register-form" id="register-form" method="POST">
+
+
+
+      <div class="container mb-5 flex flex-center">
+        <img src="{% static 'img/icons/privacy.svg' %}" class="icon" alt="Login Icon" />
+        <span class="title">Let's Get Started</span>
+      </div>
+
+      {% csrf_token %}
+      <div class="row">
+      <div class="container col s10 m10 offset-m1 offset-s1 l5 offset-l1">
+        <div class="input-field">
+          <i class="material-icons prefix">face</i>
+          <input
+            id="first_name"
+            name="first_name"
+            required 
+            minlength="2"
+            type="text"
+            autocomplete="first_name"
+            class="validate"
+          />
+          <label for="first_name">First Name</label>
+          <span
+            class="helper-text"
+            data-error="Don't leave it empty!"
+            data-success="Looks Good!"
+            >First Name as per records</span
+          >
+        </div>
+      </div>
+
+      
+      <div class="container col offset-m1 offset-s1 s10 m10 l5">
+        <div class="input-field">
+          <i class="material-icons prefix">face</i>
+          <input
+            id="last_name"
+            name="last_name"
+            required 
+            minlength="1"
+            type="text"
+            autocomplete="last_name"
+            class="validate"
+          />
+          <label for="last_name">Last Name</label>
+          <span
+            class="helper-text"
+            data-error="Don't leave it empty!"
+            data-success="Looks Good!"
+            >Last Name as per records</span
+          >
+        </div>
+      </div>
+      </div>
+
+      <div class="container col s10 m10 l10">
+        <div class="input-field">
+
+          <i class="material-icons prefix">account_circle</i>
+          <input
+            id="email"
+            name="email"
+            required 
+            minlength="6"
+            type="email"
+            autocomplete="email"
+            class="validate"
+          />
+          <label for="email">Email ID</label>
+          <span
+            class="helper-text"
+            data-error="Enter a valid Email!"
+            data-success="Looks Good!"
+            >Email in by your institution</span
+          >
+        </div>
+      </div>
+
+
+        
+      <div class="container col s10 m10 l10">
+        <div class="flex flex-radio">
+            <i class="material-icons">school</i>
+            <label>
+                <input class="with-gap" name="role" value="student" type="radio" checked />
+                <span>Student</span>
+            </label>
+            <label>
+                <input class="with-gap" name="role" value="tutor" type="radio" />
+                <span>Tutor</span>
+            </label>
+        </div>
+      </div>
+
+      <div class="container col s10 m10 l10">
+        <div class="input-field">
+          <i class="material-icons prefix">info</i>
+          <input
+            id="regID"
+            type="text"
+            minlength="4"
+            autocomplete="roll-no"
+            required 
+            name="regID"
+            class="validate"
+          />
+          <label for="regID">Reg ID</label>
+          <span
+            class="helper-text"
+            data-error="Must be at least 4 characters!"
+            data-success="Looks Good!"
+            >Reg Number/ID</span
+          >
+        </div>
+      </div>
+
+      
+      <div class="container col s10 m10 l10">
+        <div class="input-field">
+          <i class="material-icons prefix">domain</i>
+          <input
+            id="dept"
+            type="text"
+            minlength="4"
+            autocomplete="dept"
+            name="dept"
+            required 
+            class="validate"
+          />
+          <label for="dept">Department</label>
+          <span
+            class="helper-text"
+            data-error="Don't leave it empty!"
+            data-success="Looks Good!"
+            >Domain of Study</span
+          >
+        </div>
+      </div>
+
+      <div class="container col s10 m10 l10">
+        <div class="input-field">
+          <i class="material-icons prefix">lock</i>
+          <input
+            id="password"
+            type="password"
+            required 
+            minlength="8"
+            autocomplete="current-password"
+            name="password"
+            class="validate"
+          />
+          <label for="password">Password</label>
+          <span
+            class="helper-text"
+            data-error="Password must be at least 8 characters!"
+            data-success="Looks Good!"
+            >Your Secret Password</span
+          >
+        </div>
+      </div>
+
+      <div class="container col s10 m10 l10">
+        <div class="input-field">
+          <i class="material-icons prefix">lock</i>
+          <input
+            id="confirmPassword"
+            type="password"
+            required 
+            minlength="8"
+            autocomplete="confirm-password"
+            name="confirmPassword"
+            class="validate"
+          />
+          <label for="confirmPassword">Confirm Password</label>
+          <span
+            class="helper-text"
+            id="confirm-helper"
+            data-error="Password must be same!"
+            data-success="Looks Good!"
+            >Your Password Again</span
+          >
+        </div>
+      </div>
+
+      <div class="container col s10 m10 l10">
+        <div class="flex flex-center">
+          <input type="submit" class="orange-button" value="Create User" />
+        </div>
+      </div>
+ 
+    </form>
+  </div>
+</div>
+<br>
+<script src="{% static 'general/js/register.js' %}"></script>
+
+{% endblock MainContent %}
+
+
+
+{% block Footer %}
+  {% include 'general/footer.html' %}
+{% endblock Footer %}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExamApp - Login Page</title>
+    <!-- Compiled and minified CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="materialize.min.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="login.css" />
+    <style>
+      body {
+        background-color: #ffffee;
+
+        overflow: hidden;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #ffb346 0%, #ffcc33 100%);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #ffd346 0%, #ffcc33 100%);
+      }
+    </style>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="materialize.min.js"></script>
+  </head>
+  <body>
+    <nav class="nav-fixed">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <img src="img/writing.svg" alt="ExamApp Icon" />
+          <span>ExamApp</span>
+        </div>
+        <div class="links hide-on-med-and-down">
+          <a href="index.html" class="link">Courses</a>
+          <a href="profile.html" class="link">Profile</a>
+          <a href="settings.html" class="link">Settings</a>
+          <a href="login.html" class="nav-button">Get Started</a>
+        </div>
+        <div class="links hide-on-large-only">
+          <a href="#" class="nav-button">Get Started</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col s10 offset-s1 m8 offset-m2 l4 offset-l4">
+        <div class="login-form">
+          <div class="container mb-5 flex flex-center">
+            <img src="img/privacy.svg" class="icon" alt="Login Icon" />
+            <span class="title">Let's Get Started</span>
+          </div>
+
+          <div class="container col s10 m10 l10">
+            <div class="input-field">
+              <i class="material-icons prefix">business</i>
+              <input
+                id="domain"
+                name="login-domain"
+                type="url"
+                class="validate"
+              />
+              <label for="domain">Domain</label>
+              <span
+                class="helper-text"
+                data-error="Enter a valid domain!"
+                data-success="Looks Good!"
+                >Your Insitution Domain</span
+              >
+            </div>
+          </div>
+
+          <div class="container col s10 m10 l10">
+            <div class="input-field">
+              <i class="material-icons prefix">account_circle</i>
+              <input
+                id="user_name"
+                name="login-username"
+                minlength="6"
+                type="text"
+                class="validate"
+              />
+              <label for="user_name">User Name</label>
+              <span
+                class="helper-text"
+                data-error="Username must be at least 6 characters!"
+                data-success="Looks Good!"
+                >Username given by your institution</span
+              >
+            </div>
+          </div>
+          <div class="container col s10 m10 l10">
+            <div class="input-field">
+              <i class="material-icons prefix">lock</i>
+              <input
+                id="password"
+                type="password"
+                minlength="8"
+                name="login-password"
+                class="validate"
+              />
+              <label for="password">Password</label>
+              <span
+                class="helper-text"
+                data-error="Password must be at least 8 characters!"
+                data-success="Looks Good!"
+                >Your Secret Password</span
+              >
+            </div>
+          </div>
+
+          <div class="container col s10 m10 l10">
+            <div class="flex flex-center">
+              <a href="#" class="orange-button">Login</a>
+            </div>
+          </div>
+          <div class="container col s10 m10 l10">
+            <div class="flex flex-center">
+              <a href="#"> <strong>Forget Password?</strong> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

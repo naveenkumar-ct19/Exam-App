@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block NavBar  %} 
+    {% include "general/navbar.html"  with courses=True %}
+{% endblock NavBar %}
+
+
+
+
+{% block MainContent %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'tutor/css/courses.css' %}" />
+<script src="{% static 'tutor/js/courses.js' %}"> </script>
+{% include 'general/extras.html' %}
+ <div class="row">
+      <div class="courses-tab col s12 m12 l12">
+        <div>
+          <span class="title">MY COURSES</span>
+        </div>
+        <div class="courses-list">
+
+
+
+          {% for i in courses %}
+            <div class="card-wrapper col s12 m6 l3">
+            <div class="card">
+              <div class="subject-banner">
+                <div class="subject-name">
+                  {{i.title}}
+                </div>
+              </div>
+              <div class="faculty-details">
+                <a href=" {% url 'manageCourses' i.id %}" id="model-{{i.id}}-btn" class="waves-effect waves-light modal-trigger orange-button">Manage</a>
+              </div>
+              <div class="student-details">
+                <i class="material-icons">school</i> <span> 0 Students</span>
+              </div>
+              <div id="course-button" class="course-button">
+                TAKE ME IN
+              </div>
+            </div>
+          </div>
+
+  
+          {% endfor %}
+
+          
+            
+          <div class="card-wrapper col s12 m6 l3">
+            <a class="modal-trigger" href="#add-course">
+              <div id="add-course-card" class="card add-courses">
+                <img src="{% static 'img/icons/add.svg' %}" alt="Add Icon">
+                <span>Add New Course</span>
+              </div>
+            </a>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+  <div id="add-course" class="modal">
+    <div class="modal-content">
+      <h6>New Course</h6>
+          <form class="add-course-form" action='{% url "addCourses" %}' method="POST">
+   
+            {% csrf_token %}
+
+            <div class="container col s10 m10 l10">
+              <div class="input-field">
+                <i class="material-icons prefix">book</i>
+                <input
+                  id="Title"
+                  name="title"
+                  minlength="5"
+                  type="text"
+                  required
+                  autocomplete="title"
+                  class="validate"
+                />
+                <label for="Title">Title</label>
+                <span
+                  class="helper-text"
+                  data-error="Please choose a good title!"
+                  data-success="Looks Good!"
+                  >Title of Course</span
+                >
+              </div>
+            </div>
+ 
+            
+            <div class="container col s10 m10 l10">
+              <div class="flex flex-center">
+                <div id="description-input" class="input-field">
+                  <i class="material-icons prefix">description</i>
+                  <textarea id="description" name="description" class="validate materialize-textarea" required                   minlength="6"
+                  minlength="6"></textarea>
+                  <label for="description">Description</label>
+                  <span
+                  class="helper-text"
+                  data-error="Add more description!"
+                  data-success="Looks Good!">Short Description</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="container col s10 m10 l10">
+              <div class="flex flex-center">
+                <input type="submit" class="orange-button" value="Create" />
+              </div>
+            </div>
+
+             
+          </form> 
+    </div>
+    
+  </div>
+
+{% endblock MainContent %}
+
+
+{% block Footer %}
+    {% include "general/footer.html" %}
+{% endblock Footer %}

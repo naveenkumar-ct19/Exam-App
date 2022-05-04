@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block NavBar %}
+    {% include 'general/navbar.html' with profile=True %}
+{% endblock NavBar %}
+
+
+{% block MainContent %}
+
+<link rel="stylesheet" href="{% static 'tutor/css/profile.css' %}" />
+
+<div class="row courses-list">
+      <div class="col s12 l8 profile-banner">
+        <div class="row">
+          <div class="col s4 l3">
+            <div class="card profile-image">
+              <img src="{% static 'img/icons/graduate.svg' %}" alt="Profile Image" />
+            </div>
+          </div>
+          <div class="col s8 l9">
+            <div class="card profile-details">
+              <div class="row">
+                <div class="col s12 l12 profile-name">
+                  <span class="truncate">{{ user.first_name|add:" "|add:user.last_name }}</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12 l12 profile-register-no">
+                  <i class="material-icons">stars</i>
+                  <span>{{ user.reg_id }}</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12 l12 profile-register-no">
+                  <i class="material-icons">business</i>
+                  <span>{{ user.dept_name }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col s6 l2">
+        <div class="card profile-card">
+          <img src="{% static 'img/icons/message.svg' %}" alt="Message Icon" />
+          <span class="count">0</span>
+          <span>Unread Messages</span>
+        </div>
+      </div>
+      <div class="col s6 l2">
+        <div class="card profile-card">
+          <img src="{% static 'img/icons/writing.svg' %}" alt="Review Icon" />
+          <span class="count">2</span>
+          <span>Reviews Pending</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s8 l10 offset-l1 offset-s2">
+          <div class="divider"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="courses-tab row">
+      <div class="headings">
+        <span class="title">MY COURSES</span>
+        <a href="#">VIEW ALL</a>
+      </div>
+      <div class="courses-list">
+        <div class="card-wrapper col s12 m6 l4">
+          <div class="card">
+            <div class="subject-banner">
+              <div class="subject-name">
+                Data Strcutures and Algorithm
+              </div>
+            </div>
+            <div class="student-details">
+              <i class="material-icons">school</i> <span> 57 Students</span>
+            </div>
+            <div id="course-button" class="course-button">
+              TAKE ME IN
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper col s12 m6 l4">
+          <div class="card">
+            <div class="subject-banner">
+              <div class="subject-name">
+                Data Strcutures and Algorithm
+              </div>
+            </div>
+            <div class="student-details">
+              <i class="material-icons">school</i> <span> 57 Students</span>
+            </div>
+            <div id="course-button" class="course-button">
+              TAKE ME IN
+            </div>
+          </div>
+        </div>
+        <div class="card-wrapper col s12 m6 l4">
+          <div class="card">
+            <div class="subject-banner">
+              <div class="subject-name">
+                Data Strcutures and Algorithm
+              </div>
+            </div>
+            <div class="student-details">
+              <i class="material-icons">school</i> <span> 57 Students</span>
+            </div>
+            <div id="course-button" class="course-button">
+              TAKE ME IN
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<br>    
+    
+{% endblock MainContent %}
+
+{% block Footer %}
+    {% include 'general/footer.html' %}
+
+{% endblock Footer %}
+

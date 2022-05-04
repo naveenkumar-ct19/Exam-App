@@ -1,0 +1,208 @@
+.card {
+  height: 200px;
+  width: 100%;
+}
+.profile-card span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.profile-card .count {
+  font-size: 40px;
+  font-weight: 600;
+}
+.profile-card img {
+  width: 40%;
+  height: 50%;
+}
+.profile-card {
+  background: #ffffff;
+  display: flex;
+  padding: 25px 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.profile-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none !important;
+}
+
+.profile-image img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.profile-details i {
+  color: #ffcc33 !important;
+}
+.profile-details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: none !important;
+}
+.profile-name span {
+  font-size: 25px;
+  font-weight: bold;
+}
+.profile-register-no {
+  display: flex;
+  color: #ffcc33;
+  align-items: center;
+}
+.profile-register-no span {
+  font-size: 18px;
+  margin-left: 5px;
+  color: #6340a3;
+  font-weight: bold;
+}
+
+.row {
+  margin-bottom: 5px !important;
+}
+
+.blue-button {
+  background: #6340a3;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 0 !important;
+  padding: 20px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.headings {
+  width: 100%;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.courses-tab {
+  padding: 20px !important;
+}
+
+.courses-tab .courses-list {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.courses-list .card-wrapper .card {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 !important;
+  padding: 10px 15px;
+  box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+}
+
+.courses-list .card-wrapper {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  margin: 10px 0;
+}
+
+.card .subject-banner {
+  height: 60%;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #2a0846;
+}
+
+.card i {
+  color: #2a0846;
+  margin-right: 5px;
+}
+
+.card .student-details {
+  font-weight: bold;
+  display: flex;
+  color: #6340a3;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .subject-banner .subject-name {
+  font-size: 20px;
+  max-height: 90%;
+  max-width: 100%;
+  display: block;
+  margin: 5px 10px;
+  text-overflow: ellipsis;
+  color: #fafafa;
+  overflow: hidden;
+  text-align: center;
+  font-weight: bold;
+}
+
+.course-button {
+  width: 100%;
+  height: 10%;
+  border-radius: 5px;
+  font-weight: 400;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  line-height: 0 !important;
+  padding: 15px 20px;
+  cursor: pointer;
+  text-align: center;
+  background: #6340a3;
+}
+
+.card .faculty-details .faculty-image {
+  height: 30px;
+  background-color: white;
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.13);
+  border-radius: 50%;
+  width: 30px;
+  margin: 0 10px 0 0;
+}
+.faculty-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.card .faculty-details .faculty-name {
+  max-width: 100%;
+  max-height: 100%;
+  font-weight: bold;
+  color: #ff9f00;
+}
+
+.card .faculty-details {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
+}
