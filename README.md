@@ -3,11 +3,11 @@ ExamApp provides the complete solution for Organizations and Educational Institu
 
 ## Features: 🚀 
 
-### <img src="https://raw.githubusercontent.com/shrihari689/ExamApp/master/UI/lightning.png?token=ANVLPPYCL57Z72G63IHO5NK7HD2S4"  width="20" height="20"> - Simple and Faster
+###  - Simple and Faster
 
-### <img src="https://raw.githubusercontent.com/shrihari689/ExamApp/master/UI/friends.png?token=ANVLPP5K63K6JJW5ECVH6FC7HD23O"  width="20" height="20"> - User-friendly
+###  - User-friendly
 
-### <img src="https://raw.githubusercontent.com/shrihari689/ExamApp/master/UI/web-design.png?token=ANVLPPZMGEIMDHPN3TZODYS7HD3CM"  width="20" height="20"> - Customizable
+###  - Customizable
 
 
 ### Mouse Lock:
